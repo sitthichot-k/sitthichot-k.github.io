@@ -37,7 +37,7 @@
     -webkit-font-smoothing: antialiased;
   }
   .wrap { max-width: 680px; margin: 0 auto; padding: 56px 20px 80px; }
-
+ 
   header { margin-bottom: 40px; }
   h1 { font-size: 1.7rem; margin: 0 0 6px; letter-spacing: -0.01em; }
   .role { color: var(--muted); margin: 0 0 18px; }
@@ -45,14 +45,14 @@
   .contact a { color: var(--accent); text-decoration: none; }
   .contact a:hover { text-decoration: underline; }
   .sep { margin: 0 8px; opacity: 0.4; }
-
+ 
   h2 {
     font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.09em;
     color: var(--muted); font-weight: 600;
     margin: 40px 0 14px; padding-bottom: 8px;
     border-bottom: 1px solid var(--border);
   }
-
+ 
   .card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -62,16 +62,16 @@
   }
   .card h3 { margin: 0 0 4px; font-size: 1.05rem; line-height: 1.4; }
   .issuer { color: var(--muted); font-size: 0.92rem; margin: 0 0 16px; }
-
+ 
   dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 18px;
        margin: 0 0 18px; font-size: 0.92rem; }
   dt { color: var(--muted); }
   dd { margin: 0; font-variant-numeric: tabular-nums; word-break: break-all; }
-
+ 
   ul.tracks { margin: 0 0 18px; padding-left: 18px; font-size: 0.92rem; color: var(--muted); }
   ul.tracks li { margin-bottom: 4px; }
   ul.tracks strong { color: var(--text); font-weight: 600; }
-
+ 
   .actions { display: flex; flex-wrap: wrap; gap: 10px; }
   .btn {
     display: inline-block; padding: 9px 16px; border-radius: 7px;
@@ -83,21 +83,24 @@
   .btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
   @media (prefers-color-scheme: dark) { .btn-primary { color: #14161a; } }
   .btn-primary:hover { opacity: 0.9; }
-
+ 
   .note {
     background: var(--accent-soft); border: 1px solid var(--border);
     border-radius: var(--radius); padding: 16px 18px;
     font-size: 0.86rem; color: var(--muted); line-height: 1.6;
   }
   .note strong { color: var(--text); }
-
+ 
+  .fallback { margin: 14px 0 0; font-size: 0.8rem; color: var(--muted); }
+  .fallback a { color: var(--accent); }
+ 
   footer { margin-top: 44px; font-size: 0.82rem; color: var(--muted); }
   footer a { color: var(--accent); }
 </style>
 </head>
 <body>
 <div class="wrap">
-
+ 
   <header>
     <h1>Sitthichot Khueankhamsaen</h1>
     <p class="role">Full Stack Developer &middot; Backend-Focused</p>
@@ -107,42 +110,78 @@
       <a href="mailto:6631501170@lamduan.mfu.ac.th">6631501170@lamduan.mfu.ac.th</a>
     </p>
   </header>
-
+ 
   <h2>Certifications</h2>
-
+ 
   <!-- ═══════════════════════════════════════════════════════════
-       เหลือแก้อย่างเดียว: อัปไฟล์ใบเซอร์ 2 ไฟล์เข้า repo เดียวกัน ตั้งชื่อว่า
-         hccda-cloud-native.pdf   และ   hccda-tech-essentials.pdf
-       (ถ้าไม่อัป → ลบปุ่ม "View certificate" ทิ้งทั้ง 2 การ์ด)
-       ตรวจ "Valid until" ของใบ Cloud Native ให้ตรงกับที่พิมพ์บนใบจริงด้วย
+       เซฟรูปใบคุณวุฒิวิชาชีพ 2 ใบเข้า repo นี้ ตั้งชื่อว่า
+         tpqi-professional-qualification.png   (ใบ Certificate of Professional Qualification)
+         tpqi-competency.png                   (ใบ Certificate of Competency)
+       ใช้เป็นสำเนาสำรองเผื่อเว็บ สคช. ล่ม — ปุ่ม verify ชี้ไปเว็บทางการแล้ว
        ═══════════════════════════════════════════════════════════ -->
-
+  <div class="card">
+    <h3>Professional Qualification — Cloud Developer, Level 5</h3>
+    <p class="issuer">Thailand Professional Qualification Institute (TPQI), a Thai public
+      organisation — assessed jointly with Huawei Technologies (Thailand)</p>
+ 
+    <dl>
+      <dt>Certificate No.</dt>
+      <dd>OSCN-0012/ICT-SWA-5-213203-B-26/055857</dd>
+      <dt>Identification No.</dt>
+      <dd>OCCN-0012-26/001-055857</dd>
+      <dt>Assessed</dt>
+      <dd>28 August 2026</dd>
+      <dt>Issued</dt>
+      <dd>31 August 2026</dd>
+    </dl>
+ 
+    <ul class="tracks">
+      <li><strong>ICT-NQBC-012B</strong> — Operate enterprise program development
+          (Enterprise / Big Scale).</li>
+      <li><strong>ICT-AUWF-034B</strong> — Develop software using advanced UML modelling.</li>
+      <li><strong>ICT-XRRT-036B</strong> — Analyse software errors in cloud technology.</li>
+    </ul>
+ 
+    <div class="actions">
+      <a class="btn btn-primary" href="https://cpweb.ewe.go.th/show-cert?code=321060&amp;system=5&amp;type=cert&amp;bgImage=false"
+         target="_blank" rel="noopener">Verify with TPQI &rarr;</a>
+      <a class="btn" href="https://cpweb.ewe.go.th/show-cert?code=321060&amp;system=5&amp;type=certCom&amp;bgImage=false"
+         target="_blank" rel="noopener">Verify competency record &rarr;</a>
+    </div>
+ 
+    <p class="fallback">
+      Local copies, if the issuer's site is unavailable:
+      <a href="tpqi-professional-qualification.png">professional qualification</a> ·
+      <a href="tpqi-competency.png">certificate of competency</a>
+    </p>
+  </div>
+ 
   <div class="card">
     <h3>HCCDA — Cloud Native</h3>
     <p class="issuer">Huawei Cloud Certified Developer Associate</p>
-
+ 
     <dl>
       <dt>Certificate No.</dt>
       <dd>HWENDCCNDA00195531541</dd>
       <dt>Issued</dt>
       <dd>15 July 2026</dd>
       <dt>Valid until</dt>
-      <dd>15 July 2029</dd>
+      <dd>July 2029</dd>
     </dl>
-
+ 
     <ul class="tracks">
       <li>Containers, microservices and cloud-native application architecture.</li>
     </ul>
-
+ 
     <div class="actions">
       <a class="btn btn-primary" href="hccda-cloud-native.png">View certificate</a>
     </div>
   </div>
-
+ 
   <div class="card">
     <h3>HCCDA — Tech Essentials</h3>
     <p class="issuer">Huawei Cloud Certified Developer Associate</p>
-
+ 
     <dl>
       <dt>Certificate No.</dt>
       <dd>HWENDCTEDA242972</dd>
@@ -151,30 +190,31 @@
       <dt>Valid until</dt>
       <dd>4 February 2029</dd>
     </dl>
-
+ 
     <ul class="tracks">
       <li>Core cloud technologies and IT infrastructure fundamentals.</li>
     </ul>
-
+ 
     <div class="actions">
       <a class="btn btn-primary" href="hccda-tech-essentials.png">View certificate</a>
     </div>
   </div>
-
+ 
   <h2>About this page</h2>
-
+ 
   <p class="note">
     <strong>This page is maintained by me, not by Huawei.</strong> It exists so the
-    certificate details on my CV are easy to look up in one place. The certificate numbers
-    above are the authoritative reference and appear on the original certificates linked
-    here — please treat those, not this page, as the source of truth.
+    certificate details on my CV are easy to look up in one place. The professional
+    qualification can be checked directly with the issuing institute using the buttons above;
+    for the Huawei certifications, the certificate numbers shown here are the authoritative
+    reference and appear on the original certificates.
   </p>
-
+ 
   <footer>
     Last updated September 2026 &middot;
     <a href="https://github.com/sitthichot-k">github.com/sitthichot-k</a>
   </footer>
-
+ 
 </div>
 </body>
 </html>
